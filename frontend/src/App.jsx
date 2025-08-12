@@ -18,7 +18,7 @@ function App() {
   }, []);
   async function reviewCode() {
     try {
-      const response = await axios.post('http://localhost:3000/ai/get-review', { code });
+      const response = await axios.post('https://code-reviewer-puce.vercel.app', { code });
       setReview(response.data);
     }
     catch (e) {
